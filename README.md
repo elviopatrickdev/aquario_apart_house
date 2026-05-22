@@ -45,7 +45,7 @@ O projeto destaca alojamentos, restaurante-bar com aquário integrado, piscina t
 - 🌐 [react-i18next](https://react.i18next.com/)
 - 🗺️ [Google Maps API](https://developers.google.com/maps)
 - 🔀 [React Router DOM](https://reactrouter.com/)
-- 🎨 CSS3 / Componentização moderna
+- 🎨 [Tailwind CSS (Vite plugin)](https://tailwindcss.com/) 
 
 ---
 
