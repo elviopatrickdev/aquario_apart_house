@@ -1,0 +1,105 @@
+{
+    "nav": {
+        "Início": "Inizio",
+        "Sobre": "Chi siamo",
+        "Alojamentos": "Appartamenti",
+        "Restaurante": "Ristorante",
+        "Piscina": "Piscina",
+        "Faqs": "FAQ",
+        "Galeria": "Galleria",
+        "Contacto": "Contatto"
+    },
+    "Fazer Reserva": "Prenota Ora",
+    "hero_title_line1": "BENVENUTI A",
+    "hero_title_line2": "AQUÁRIO APART HOUSE",
+    "hero_description_line1": "Un'esperienza immersiva dove il comfort",
+    "hero_description_line2": "incontra la tranquillità del mondo sottomarino",
+    "hero_button": "Vedi appartamenti",
+    "about": {
+        "subtitle": "Benvenuti a",
+        "title": "Aquário Apart House",
+        "text1_part1": "Al",
+        "text1_part2": ", crediamo che la vera pace risieda nella fluidità. La nostra essenza è pensata per chi vuole disconnettersi dalla superficie e immergersi in un rifugio dove design organico e vita marina convivono in armonia.",
+        "text2": "Immagina di camminare su acque cristalline nel nostro pavimento acquario, cenare circondato dal silenzioso balletto dei pesci e ricaricarti nella nostra esclusiva Piscina Tartaruga.",
+        "highlight": "Non siamo solo un luogo di riposo, siamo il tuo ossigeno nella routine.",
+        "feature1": "Appartamenti esclusivi",
+        "feature2": "Ristorante acquario",
+        "feature3": "Piscina Tartaruga",
+        "feature4": "Internet gratuito",
+        "feature5": "Aria condizionata Smart TV",
+        "feature6": "10 min dal mare e centro città"
+    },
+    "house": {
+        "subtitle": "Sentiti a casa nei nostri",
+        "title": "Appartamenti",
+        "description": "Ogni nostro appartamento è un santuario di comfort...",
+        "noite": "Notte",
+        "people": "Persona",
+        "view_photos": "Vedi foto",
+        "more_apartments": "Altri appartamenti"
+    },
+    "restaurant": {
+        "subtitle": "Dove ogni pasto è un'immersione nell'eccezionale",
+        "title": "Ristorante-Bar",
+        "description": "Un ristorante-bar dove ogni dettaglio sorprende: sapori freschi, drink coinvolgenti e un ambiente unico con acquari sulle pareti e persino sotto i tuoi piedi. Tra biliardo, buona musica e un’atmosfera unica, è un invito a restare — e tornare.",
+        "feature1": "Gastronomia raffinata",
+        "feature2": "Drink e cocktail"
+    },
+    "pool": {
+        "subtitle": "Galleggiare non è mai stato così naturale",
+        "title": "Piscina Tartaruga",
+        "description": "Una piscina unica a forma di tartaruga, progettata per rallentare i sensi e avvolgere il corpo in un’esperienza di pura tranquillità. Qui ogni tuffo invita alla leggerezza, come se il tempo seguisse il dolce ritmo dell’acqua — un rifugio perfetto per rilassarsi, respirare e semplicemente galleggiare."
+    },
+    "testimonials": {
+        "subtitle": "Esperienze che parlano da sole",
+        "title": "Testimonianze",
+        "0": "Un’esperienza unica, tra comfort e dettagli affascinanti.",
+        "1": "Non ho mai visto un posto così, indimenticabile.",
+        "2": "Tornerei senza pensarci due volte, tutto ha superato le aspettative.",
+        "3": "Servizio impeccabile e atmosfera accogliente."
+    },
+    "gallery": {
+        "subtitle": "Momenti catturati",
+        "title": "Galleria di Momenti",
+        "button": "Vedi altro"
+    },
+    "contact": {
+        "subtitle": "Siamo qui per te",
+        "title": "Contatto",
+        "subtitleForm": "Invia il tuo messaggio via WhatsApp",
+        "name": "Nome",
+        "phone": "Telefono",
+        "message": "Messaggio",
+        "helperText": "Il tuo messaggio sarà inviato direttamente via WhatsApp.",
+        "send": "Invia messaggio",
+        "whatsappMessage": "Nuovo messaggio di contatto",
+        "placeholders": {
+            "name": "Inserisci il tuo nome",
+            "phone": "Inserisci il tuo numero",
+            "message": "Ciao, vorrei fare una prenotazione"
+        }
+    },
+    "cta": {
+        "title": "Pronto a uscire dalla routine?",
+        "subtitle": "Rendiamo il tuo soggiorno indimenticabile."
+    },
+    "footer": {
+        "contact": "Contatto",
+        "links": "Link rapidi",
+        "apartments": "Appartamenti",
+        "location": "Boa Vista, Capo Verde",
+        "rights": "© 2026 Aquário Apart Hotel. Tutti i diritti riservati.",
+        "dev": "Sviluppato da",
+        "description": "Comfort e praticità in ogni soggiorno, con ristorante acquatico e piscina esclusiva a forma di tartaruga."
+    },
+    "filters": {
+        "search": "Cerca alloggio...",
+        "guests": "Numero di persone",
+        "minPrice": "Prezzo minimo (€)",
+        "maxPrice": "Prezzo massimo (€)"
+    },
+    "apartments": {
+        "subtitle": "Sentiti a casa nei nostri",
+        "title": "Alloggi"
+    }
+}

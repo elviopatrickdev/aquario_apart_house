@@ -1,0 +1,105 @@
+{
+    "nav": {
+        "Início": "Home",
+        "Sobre": "About",
+        "Alojamentos": "Accommodations",
+        "Restaurante": "Restaurant",
+        "Piscina": "Pool",
+        "Faqs": "Faqs",
+        "Galeria": "Gallery",
+        "Contacto": "Contact"
+    },
+    "Fazer Reserva": "Book Now",
+    "hero_title_line1": "WELCOME TO",
+    "hero_title_line2": "AQUÁRIO APART HOUSE",
+    "hero_description_line1": "An immersive experience where comfort",
+    "hero_description_line2": "meets the tranquility of the underwater world",
+    "hero_button": "View Apartments",
+    "about": {
+        "subtitle": "Welcome to",
+        "title": "Aquário Apart House",
+        "text1_part1": "At",
+        "text1_part2": ", we believe true peace lies in fluidity. Our essence was designed for those who wish to disconnect from the surface and dive into a retreat where organic design and marine life coexist in harmony.",
+        "text2": "Imagine walking over crystal-clear waters on our aquarium floor, dining surrounded by the silent ballet of fish, and recharging in our exclusive Turtle Pool.",
+        "highlight": "We are not just a place to rest, we are your oxygen in the middle of routine.",
+        "feature1": "Exclusive Apartments",
+        "feature2": "Aquarium Restaurant",
+        "feature3": "Turtle Pool",
+        "feature4": "Free Internet",
+        "feature5": "Air Conditioning Smart TV",
+        "feature6": "10 min from beach and city center"
+    },
+    "house": {
+        "subtitle": "Feel at home in our",
+        "title": "Apartments",
+        "description": "Each of our apartments is a sanctuary of comfort...",
+        "noite": "Night",
+        "people": "People",
+        "view_photos": "View Photos",
+        "more_apartments": "More Apartments"
+    },
+    "restaurant": {
+        "subtitle": "Where every meal is a dive into the extraordinary",
+        "title": "Restaurant & Bar",
+        "description": "A restaurant-bar where every detail surprises: fresh flavors, immersive drinks, and a unique atmosphere with aquariums on the walls and even under your feet. With snooker, good music, and a unique vibe, it invites you to stay — and come back.",
+        "feature1": "Fine Dining",
+        "feature2": "Drinks & Cocktails"
+    },
+    "pool": {
+        "subtitle": "Floating has never felt so natural",
+        "title": "Turtle Pool",
+        "description": "A unique turtle-shaped pool designed to slow down the senses and wrap the body in a pure relaxation experience. Here, every dive invites lightness, as if time followed the gentle rhythm of the water — a perfect refuge to relax, breathe, and simply float."
+    },
+    "testimonials": {
+        "subtitle": "Experiences that speak for themselves",
+        "title": "Testimonials",
+        "0": "A unique experience, between comfort and charming details.",
+        "1": "I have never seen a place like this, unforgettable.",
+        "2": "I would come back without hesitation, everything exceeded expectations.",
+        "3": "Impeccable service and a welcoming atmosphere."
+    },
+    "gallery": {
+        "subtitle": "Captured moments",
+        "title": "Gallery of Moments",
+        "button": "View More"
+    },
+    "contact": {
+        "subtitle": "We are here for you",
+        "title": "Contact",
+        "subtitleForm": "Send your message via WhatsApp",
+        "name": "Name",
+        "phone": "Phone",
+        "message": "Message",
+        "helperText": "Your message will be sent directly via WhatsApp.",
+        "send": "Send Message",
+        "whatsappMessage": "New contact message",
+        "placeholders": {
+            "name": "Enter your name",
+            "phone": "Enter your phone number",
+            "message": "Hi, I would like to make a reservation"
+        }
+    },
+    "cta": {
+        "title": "Ready to break your routine?",
+        "subtitle": "Let’s make your stay unforgettable."
+    },
+    "footer": {
+        "contact": "Contact",
+        "links": "Quick Links",
+        "apartments": "Apartments",
+        "location": "Boa Vista, Cape Verde",
+        "rights": "© 2026 Aquário Apart Hotel. All rights reserved.",
+        "dev": "Developed by",
+        "description": "Comfort and convenience in every stay, with an aquatic restaurant and a unique turtle-shaped pool."
+    },
+    "filters": {
+        "search": "Search accommodation...",
+        "guests": "Number of guests",
+        "minPrice": "Minimum price (€)",
+        "maxPrice": "Maximum price (€)"
+    },
+    "apartments": {
+        "subtitle": "Feel at home in our",
+        "title": "Accommodations"
+    }
+}

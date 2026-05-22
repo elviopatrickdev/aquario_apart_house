@@ -1,0 +1,105 @@
+{
+    "nav": {
+        "Início": "Accueil",
+        "Sobre": "À propos",
+        "Alojamentos": "Appartements",
+        "Restaurante": "Restaurant",
+        "Piscina": "Piscine",
+        "Faqs": "FAQ",
+        "Galeria": "Galerie",
+        "Contacto": "Contact"
+    },
+    "Fazer Reserva": "Réserver",
+    "hero_title_line1": "BIENVENUE À",
+    "hero_title_line2": "AQUÁRIO APART HOUSE",
+    "hero_description_line1": "Une expérience immersive où le confort",
+    "hero_description_line2": "rencontre la tranquillité du monde sous-marin",
+    "hero_button": "Voir les appartements",
+    "about": {
+        "subtitle": "Bienvenue à",
+        "title": "Aquário Apart House",
+        "text1_part1": "À",
+        "text1_part2": ", nous croyons que la vraie paix réside dans la fluidité. Notre essence est conçue pour ceux qui souhaitent se déconnecter de la surface et plonger dans un refuge où le design organique et la vie marine coexistent en harmonie.",
+        "text2": "Imaginez marcher sur des eaux cristallines sur notre sol aquarium, dîner entouré du ballet silencieux des poissons et vous ressourcer dans notre piscine Tortue exclusive.",
+        "highlight": "Nous ne sommes pas seulement un lieu de repos, nous sommes votre oxygène au milieu de la routine.",
+        "feature1": "Appartements exclusifs",
+        "feature2": "Restaurant aquarium",
+        "feature3": "Piscine Tortue",
+        "feature4": "Internet gratuit",
+        "feature5": "Climatisation Smart TV",
+        "feature6": "10 min de la plage et du centre-ville"
+    },
+    "house": {
+        "subtitle": "Sentez-vous chez vous dans nos",
+        "title": "Appartements",
+        "description": "Chacun de nos appartements est un sanctuaire de confort...",
+        "noite": "Nuit",
+        "people": "Personne",
+        "view_photos": "Voir les photos",
+        "more_apartments": "Plus d'appartements"
+    },
+    "restaurant": {
+        "subtitle": "Où chaque repas est une immersion dans l’extraordinaire",
+        "title": "Restaurant-Bar",
+        "description": "Un restaurant-bar où chaque détail surprend : saveurs fraîches, cocktails immersifs et une ambiance unique avec des aquariums sur les murs et même sous vos pieds. Entre billard, bonne musique et atmosphère unique, c’est une invitation à rester — et revenir.",
+        "feature1": "Gastronomie raffinée",
+        "feature2": "Cocktails & boissons"
+    },
+    "pool": {
+        "subtitle": "Flotter n’a jamais été aussi naturel",
+        "title": "Piscine Tortue",
+        "description": "Une piscine unique en forme de tortue, conçue pour ralentir les sens et envelopper le corps dans une expérience de pure tranquillité. Ici, chaque plongeon invite à la légèreté, comme si le temps suivait le rythme doux de l’eau — un refuge parfait pour se détendre, respirer et simplement flotter."
+    },
+    "testimonials": {
+        "subtitle": "Des expériences qui parlent d’elles-mêmes",
+        "title": "Témoignages",
+        "0": "Une expérience unique, entre confort et charme des détails.",
+        "1": "Je n’ai jamais vu un endroit pareil, inoubliable.",
+        "2": "Je reviendrais sans hésiter, tout a dépassé les attentes.",
+        "3": "Service impeccable et ambiance chaleureuse."
+    },
+    "gallery": {
+        "subtitle": "Instants capturés",
+        "title": "Galerie de Moments",
+        "button": "Voir plus"
+    },
+    "contact": {
+        "subtitle": "Nous sommes là pour vous",
+        "title": "Contact",
+        "subtitleForm": "Envoyez votre message via WhatsApp",
+        "name": "Nom",
+        "phone": "Téléphone",
+        "message": "Message",
+        "helperText": "Votre message sera envoyé directement via WhatsApp.",
+        "send": "Envoyer le message",
+        "whatsappMessage": "Nouveau message de contact",
+        "placeholders": {
+            "name": "Entrez votre nom",
+            "phone": "Entrez votre numéro",
+            "message": "Bonjour, je voudrais faire une réservation"
+        }
+    },
+    "cta": {
+        "title": "Prêt à sortir de la routine ?",
+        "subtitle": "Rendons votre séjour inoubliable."
+    },
+    "footer": {
+        "contact": "Contact",
+        "links": "Liens rapides",
+        "apartments": "Appartements",
+        "location": "Boa Vista, Cap-Vert",
+        "rights": "© 2026 Aquário Apart Hotel. Tous droits réservés.",
+        "dev": "Développé par",
+        "description": "Confort et praticité à chaque séjour, avec un restaurant aquatique et une piscine exclusive en forme de tortue."
+    },
+    "filters": {
+        "search": "Rechercher un hébergement...",
+        "guests": "Nombre de personnes",
+        "minPrice": "Prix minimum (€)",
+        "maxPrice": "Prix maximum (€)"
+    },
+    "apartments": {
+        "subtitle": "Sentez-vous chez vous dans nos",
+        "title": "Hébergements"
+    }
+}
