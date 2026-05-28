@@ -6,7 +6,6 @@ import logo from "../assets/logo.png";
 import NavLinks02 from "./NavLinks02";
 
 function NavBar02() {
-
     const { i18n, t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +24,7 @@ function NavBar02() {
 
     const currentLanguage =
         languages.find((lang) => lang.code === i18n.language) || languages[0];
+
     const handleLinkClick = () => {
         setIsOpen(false);
     };
@@ -36,9 +36,12 @@ function NavBar02() {
                 menuRef.current &&
                 !menuRef.current.contains(event.target) &&
                 buttonRef.current &&
-                !buttonRef.current.contains(event.target)
+                !buttonRef.current.contains(event.target) &&
+                languageRef.current &&
+                !languageRef.current.contains(event.target)
             ) {
                 setIsOpen(false);
+                setIsLanguageOpen(false);
             }
         };
 
@@ -63,25 +66,22 @@ function NavBar02() {
                         />
                     </div>
 
-                    {/* Right buttons desktop */}
-                    <div className="flex justify-between items-center">
+                    {/* Right side */}
+                    <div className="flex items-center">
 
                         {/* Language Switcher Desktop */}
-                        <div
-                            ref={languageRef}
-                            className="relative hidden lg:flex items-center"
-                        >
+                        <div ref={languageRef} className="relative hidden lg:flex items-center">
                             <button
                                 onClick={() => setIsLanguageOpen((prev) => !prev)}
-                                className="flex items-start gap-1 px-4 py-3 hover:border-[#0F4A5A] transition-all duration-300 bg-white hover:text-[#0F4A5A] hover:scale-105 transform transition-transform duration-300 ease-out cursor-pointer"
+                                className="flex items-center gap-1 px-4 py-3 hover:text-[#0F4A5A] transition-all duration-300 bg-white hover:scale-105 cursor-pointer"
                             >
                                 <span
-                                    className={`${currentLanguage.flag} text-lg`}
+                                    className={`${currentLanguage.flag}`}
                                     style={{ width: "22px", height: "16px", display: "inline-block" }}
                                 />
 
                                 <svg
-                                    className={`w-4 h-4 relative transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""
+                                    className={`w-4 h-4 transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""
                                         }`}
                                     fill="none"
                                     stroke="currentColor"
@@ -96,7 +96,6 @@ function NavBar02() {
                                 </svg>
                             </button>
 
-                            {/* Dropdown */}
                             {isLanguageOpen && (
                                 <div className="absolute top-14 right-0 bg-white border border-gray-200 rounded-2xl shadow-xl p-2 min-w-[220px] z-50 animate-fade-in">
                                     {languages.map((lang) => (
@@ -106,16 +105,13 @@ function NavBar02() {
                                                 i18n.changeLanguage(lang.code);
                                                 setIsLanguageOpen(false);
                                             }}
-                                            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200  cursor-pointer hover:bg-gray-100 ${i18n.language === lang.code
-                                                ? "bg-gray-100"
-                                                : ""
+                                            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 ${i18n.language === lang.code ? "bg-gray-100" : ""
                                                 }`}
                                         >
                                             <span
-                                                className={`${lang.flag}`}
+                                                className={lang.flag}
                                                 style={{ width: "22px", height: "16px", display: "inline-block" }}
                                             />
-
                                             <span className="text-sm font-medium text-gray-700">
                                                 {lang.label}
                                             </span>
@@ -125,13 +121,12 @@ function NavBar02() {
                             )}
                         </div>
 
-                        {/* BOTÃO FAZER RESERVA (desktop) */}
+                        {/* BOTÃO RESERVA DESKTOP */}
                         <Link
-                            className="btn-dark text-sm font-medium hidden lg:flex items-center px-8 py-3 border-2 rounded-full cursor-pointer transition-all duration-300 ease-out bg-[#0F4A5A] text-white hover:shadow-xl hover:bg-[#072730] hover:scale-105 active:scale-95"
+                            className="btn-dark text-sm font-medium hidden lg:flex items-center px-8 py-3 border-2 rounded-full bg-[#0F4A5A] text-white hover:bg-[#072730] hover:scale-105 transition-all duration-300"
                             to="/"
                             onClick={() => {
                                 setIsOpen(false);
-
                                 setTimeout(() => {
                                     document.getElementById("contact")?.scrollIntoView({
                                         behavior: "smooth",
@@ -142,12 +137,66 @@ function NavBar02() {
                             {t("Fazer Reserva")}
                         </Link>
 
-                        {/* Mobile menu button */}
-                        <div className="lg:hidden flex items-center">
+                        {/* MOBILE RIGHT SIDE */}
+                        <div className="lg:hidden flex items-center gap-2">
+
+                            {/* Language Switcher Mobile */}
+                            <div ref={languageRef} className="relative flex items-center">
+                                <button
+                                    onClick={() => setIsLanguageOpen((prev) => !prev)}
+                                    className="flex items-center gap-1 px-3 py-2 bg-white hover:text-[#0F4A5A] transition-all duration-300 cursor-pointer"
+                                >
+                                    <span
+                                        className={currentLanguage.flag}
+                                        style={{ width: "22px", height: "16px", display: "inline-block" }}
+                                    />
+
+                                    <svg
+                                        className={`w-4 h-4 transition-transform duration-300 ${isLanguageOpen ? "rotate-180" : ""
+                                            }`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </button>
+
+                                {isLanguageOpen && (
+                                    <div className="absolute top-12 right-0 bg-white border border-gray-200 rounded-2xl shadow-xl p-2 min-w-[220px] z-50 animate-fade-in">
+                                        {languages.map((lang) => (
+                                            <button
+                                                key={lang.code}
+                                                onClick={() => {
+                                                    i18n.changeLanguage(lang.code);
+                                                    setIsLanguageOpen(false);
+                                                }}
+                                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-100 ${i18n.language === lang.code ? "bg-gray-100" : ""
+                                                    }`}
+                                            >
+                                                <span
+                                                    className={lang.flag}
+                                                    style={{ width: "22px", height: "16px", display: "inline-block" }}
+                                                />
+                                                <span className="text-sm font-medium text-gray-700">
+                                                    {lang.label}
+                                                </span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Hamburger */}
                             <button
                                 ref={buttonRef}
-                                className="text-2xl ml-4 w-8 flex justify-center focus:outline-none transition-all duration-300 ease-out hover:shadow-xl active:scale-95"
-                                onClick={() => setIsOpen(prev => !prev)}
+                                className="text-2xl w-8 flex justify-center focus:outline-none transition-all duration-300 hover:scale-105"
+                                onClick={() => setIsOpen((prev) => !prev)}
                             >
                                 {isOpen ? "✕" : "☰"}
                             </button>
@@ -156,50 +205,28 @@ function NavBar02() {
                 </div>
             </div>
 
-            {/* Mobile menu */}
+            {/* MOBILE MENU */}
             {isOpen && (
                 <div
                     ref={menuRef}
-                    className="lg:hidden absolute right-4 w-64 top-full text-left mt-1 px-6 py-4 space-y-4 bg-white shadow-lg rounded-lg animate-fade-in z-50"
+                    className="lg:hidden absolute right-4 w-64 top-full mt-1 px-6 py-4 space-y-4 bg-white shadow-lg rounded-lg animate-fade-in z-50"
                 >
                     <NavLinks02
                         className="block link-nav-mobile mb-3 border-b border-gray-200"
                         onClick={handleLinkClick}
                     />
 
-                    {/* Language Switcher Mobile */}
-                    <div className="pb-3 border-b border-gray-200">
-                        <div className="grid grid-cols-2 gap-2">
-                            {languages.map((lang) => (
-                                <button
-                                    key={lang.code}
-                                    onClick={() => {
-                                        i18n.changeLanguage(lang.code);
-                                        setIsOpen(false);
-                                    }}
-                                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-2xl border transition-all duration-300 ${i18n.language === lang.code
-                                        ? "bg-[#0F4A5A] text-white border-[#0F4A5A]"
-                                        : "border-gray-200 hover:border-[#0F4A5A]"
-                                        }`}
-                                >
-                                    <span
-                                        className={`${lang.flag}`}
-                                        style={{ width: "22px", height: "16px", display: "inline-block" }}
-                                    />
-
-                                    <span className="text-sm font-medium">
-                                        {lang.code.toUpperCase()}
-                                    </span>
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* BOTÃO FAZER RESERVA (mobile) */}
                     <Link
-                        className="reserva text-sm flex items-center justify-center px-7 py-3 border-2 rounded-full cursor-pointer transition-all duration-300 ease-out bg-[#0F4A5A] text-white font-semibold hover:shadow-xl active:scale-95"
-                        to="/#contact"
-                        onClick={() => setIsOpen(false)}
+                        className="text-sm flex items-center justify-center px-7 py-3 border-2 rounded-full bg-[#0F4A5A] text-white font-semibold hover:shadow-xl active:scale-95"
+                        to="/"
+                        onClick={() => {
+                            setIsOpen(false);
+                            setTimeout(() => {
+                                document.getElementById("contact")?.scrollIntoView({
+                                    behavior: "smooth",
+                                });
+                            }, 100);
+                        }}
                     >
                         {t("Fazer Reserva")}
                     </Link>

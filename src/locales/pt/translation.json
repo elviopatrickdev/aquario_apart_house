@@ -56,7 +56,18 @@
         "0": "Uma experiência única, entre o conforto e o encanto dos detalhes.",
         "1": "Nunca tinha visto um lugar assim, inesquecível.",
         "2": "Voltaria sem pensar duas vezes, tudo superou as expectativas.",
-        "3": "Atendimento impecável e ambiente acolhedor."
+        "3": "Atendimento impecável e ambiente acolhedor.",
+        "tim": "Pessoal foi super simpático e muito prestativo. Com certeza recomendamos a hospedagem no Hotel Aquario! Ótima acomodação por um preço bem acessível.",
+        "fernandes": "Hotel bem localizado na entrada de Sal Rei e a 5 minutos do centro da cidade. A praia é linda e acessível a pé em 10 minutos. A propriedade é nova, limpa e bem equipada, com uma piscina encantadora. Uma recepção calorosa e uma equipe prestativa e gentil tornaram minha estadia memorável. Obrigado 👍",
+        "sergio": "Os funcionários são ótimos, sempre dispostos a ajudar, e o apartamento era novinho em folha e muito limpo.",
+        "elia": "Ambiente agradável, quarto moderno e limpo, equipe fantástica.",
+        "lilly_sophie": "Os funcionários foram muito simpáticos e prestativos, e a acomodação era muito moderna e limpa. Nós nos sentimos à vontade.",
+        "daniel": "Apartamento estúdio novo, espaçoso, moderno, limpo e muito bem equipado, com um confortável sofá-cama. Localização próxima à bela praia de Estoril. Bom café da manhã e a melhor parte foi a piscina.",
+        "marie": "A acomodação é muito agradável, tanto em termos de comodidades quanto de localização – tranquila, mas perto de tudo. Você pode reservar de olhos fechados.",
+        "marianne": "Muito bem equipado, perto de tudo, pessoas super simpáticas, com recomendações de excursões e visitas, ideal para uma estadia relaxante e repleta de descobertas.",
+        "thomas": "Hotel ideal com quartos espaçosos e piscina nas proximidades. Recepção calorosa, quarto espaçoso, boa cama, bom café da manhã.",
+        "itsaso": "A relação qualidade-preço é muito boa. O quarto está totalmente equipado e supera as expectativas. O Wi-Fi funciona perfeitamente. A recepcionista foi muito simpática e organizou uma excursão para nós.",
+        "herve": "Nossa acomodação era espaçosa e bem equipada. Hotel perto das praias e do centro da cidade, acessível a pé. O restaurante ampliará em breve seu cardápio."
     },
     "gallery": {
         "subtitle": "Instantes capturados",
@@ -93,7 +104,7 @@
         "description": "Conforto e praticidade em cada estadia, com restaurante aquático e piscina exclusiva em formato de tartaruga."
     },
     "filters": {
-        "search": "Pesquisar alojamento...",
+        "search": "Nome ou número de apartamento",
         "guests": "Número de pessoas",
         "minPrice": "Preço mínimo (€)",
         "maxPrice": "Preço máximo (€)"

@@ -176,7 +176,7 @@ function Footer() {
                     </a>
 
                     <a
-                        href="#"
+                        href="https://www.instagram.com/aquariohotelboavista?igsh=MWR2dGhlOG1lOGsydQ%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer hover:opacity-80 transition-all hover:scale-105 active:scale-95">

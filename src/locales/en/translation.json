@@ -56,7 +56,18 @@
         "0": "A unique experience, between comfort and charming details.",
         "1": "I have never seen a place like this, unforgettable.",
         "2": "I would come back without hesitation, everything exceeded expectations.",
-        "3": "Impeccable service and a welcoming atmosphere."
+        "3": "Impeccable service and a welcoming atmosphere.",
+        "tim": "The staff were super friendly and very helpful. We definitely recommend staying at Hotel Aquario! Great accommodation at a very affordable price.",
+        "fernandes": "Hotel well located at the entrance of Sal Rei and just 5 minutes from the city center. The beach is beautiful and reachable on foot in 10 minutes. The property is new, clean, and well equipped, with a lovely swimming pool. A warm welcome and a helpful, kind staff made my stay memorable. Thank you 👍",
+        "sergio": "The staff are amazing, always willing to help, and the apartment was brand new and very clean.",
+        "elia": "Pleasant atmosphere, modern and clean room, fantastic staff.",
+        "lilly_sophie": "The staff were very friendly and helpful, and the accommodation was very modern and clean. We felt very comfortable.",
+        "daniel": "New studio apartment, spacious, modern, clean, and very well equipped, with a comfortable sofa bed. Location close to the beautiful Estoril beach. Good breakfast and the best part was the swimming pool.",
+        "marie": "The accommodation is very pleasant, both in terms of facilities and location — quiet, yet close to everything. You can book with your eyes closed.",
+        "marianne": "Very well equipped, close to everything, super friendly people with recommendations for excursions and visits, ideal for a relaxing stay full of discoveries.",
+        "thomas": "Ideal hotel with spacious rooms and a nearby swimming pool. Warm welcome, spacious room, comfortable bed, and good breakfast.",
+        "itsaso": "The value for money is very good. The room is fully equipped and exceeds expectations. The Wi-Fi works perfectly. The receptionist was very kind and organized an excursion for us.",
+        "herve": "Our accommodation was spacious and well equipped. Hotel close to the beaches and the city center, within walking distance. The restaurant will soon expand its menu."
     },
     "gallery": {
         "subtitle": "Captured moments",
@@ -93,7 +104,7 @@
         "description": "Comfort and convenience in every stay, with an aquatic restaurant and a unique turtle-shaped pool."
     },
     "filters": {
-        "search": "Search accommodation...",
+        "search": "Name or apartment number",
         "guests": "Number of guests",
         "minPrice": "Minimum price (€)",
         "maxPrice": "Maximum price (€)"

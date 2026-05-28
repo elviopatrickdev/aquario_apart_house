@@ -183,7 +183,7 @@ function Footer02() {
                     </a>
 
                     <a
-                        href="#"
+                        href="https://www.instagram.com/aquariohotelboavista?igsh=MWR2dGhlOG1lOGsydQ%3D%3D"
                         className="hover:scale-105 transition-all"
                     >
                         <FontAwesomeIcon icon={faInstagram} style={{ color: "#004d61", fontSize: "28px" }} />

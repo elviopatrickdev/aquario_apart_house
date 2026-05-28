@@ -25,7 +25,7 @@ function Contact() {
         const { name, phone, message } = formData;
 
         // Número que vai receber a mensagem (SEU número com código do país)
-        const whatsappNumber = "351912814170";
+        const whatsappNumber = "2389929333";
 
         // Monta a mensagem
         const text = `${t("contact.whatsappMessage")}
