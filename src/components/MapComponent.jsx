@@ -1,14 +1,24 @@
-import { memo, useState, useCallback, useMemo, useRef, useEffect } from "react";
+import {
+    memo,
+    useState,
+    useCallback,
+    useMemo,
+    useRef,
+    useEffect
+} from "react";
+
 import {
     GoogleMap,
     useJsApiLoader,
-    Marker,
-    InfoWindow
+    InfoWindow,
+    MarkerF
 } from "@react-google-maps/api";
 
 import logo from "../assets/logo.png";
 
-const modernStyle = [
+const libraries = ["places"];
+
+const mapStyles = [
     { elementType: "geometry", stylers: [{ color: "#e2e6d9" }] },
     { elementType: "labels.icon", stylers: [{ visibility: "on" }] },
     { elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
@@ -35,10 +45,10 @@ function MapComponent({
     const { isLoaded, loadError } = useJsApiLoader({
         id: "google-map-script",
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-        libraries: ["places"]
+        libraries
     });
 
-    const [showingInfoWindow, setShowingInfoWindow] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
     const mapRef = useRef(null);
 
     const containerStyle = useMemo(() => ({
@@ -69,11 +79,11 @@ function MapComponent({
     }, [position]);
 
     const onMarkerClick = useCallback(() => {
-        setShowingInfoWindow(true);
+        setShowInfo(true);
     }, []);
 
     const onClose = useCallback(() => {
-        setShowingInfoWindow(false);
+        setShowInfo(false);
     }, []);
 
     if (loadError) {
@@ -92,6 +102,8 @@ function MapComponent({
         );
     }
 
+    const google = window.google;
+
     return (
         <GoogleMap
             onLoad={onLoad}
@@ -99,33 +111,32 @@ function MapComponent({
             center={position}
             zoom={zoom}
             options={{
-                styles: modernStyle,
+                styles: mapStyles,
 
-                // 🔥 CONTROLOS ESSENCIAIS
                 zoomControl: true,
                 zoomControlOptions: {
-                    position: window.google?.maps?.ControlPosition?.RIGHT_CENTER
+                    position: google?.maps?.ControlPosition?.RIGHT_CENTER
                 },
 
                 streetViewControl: true,
                 streetViewControlOptions: {
-                    position: window.google?.maps?.ControlPosition?.RIGHT_BOTTOM
+                    position: google?.maps?.ControlPosition?.RIGHT_BOTTOM
                 },
 
                 fullscreenControl: true,
                 fullscreenControlOptions: {
-                    position: window.google?.maps?.ControlPosition?.TOP_RIGHT
+                    position: google?.maps?.ControlPosition?.TOP_RIGHT
                 },
 
                 mapTypeControl: true,
                 mapTypeControlOptions: {
-                    style: window.google?.maps?.MapTypeControlStyle?.DROPDOWN_MENU,
-                    position: window.google?.maps?.ControlPosition?.TOP_LEFT,
+                    style: google?.maps?.MapTypeControlStyle?.DROPDOWN_MENU,
+                    position: google?.maps?.ControlPosition?.TOP_LEFT,
                     mapTypeIds: [
-                        window.google?.maps?.MapTypeId?.ROADMAP,
-                        window.google?.maps?.MapTypeId?.SATELLITE,
-                        window.google?.maps?.MapTypeId?.HYBRID,
-                        window.google?.maps?.MapTypeId?.TERRAIN
+                        google?.maps?.MapTypeId?.ROADMAP,
+                        google?.maps?.MapTypeId?.SATELLITE,
+                        google?.maps?.MapTypeId?.HYBRID,
+                        google?.maps?.MapTypeId?.TERRAIN
                     ]
                 },
 
@@ -133,19 +144,34 @@ function MapComponent({
                 clickableIcons: true
             }}
         >
-            <Marker position={position} onClick={onMarkerClick} />
+            {/* 🔴 MARCADOR SIMPLES (ESTÁVEL E SEM BUGS) */}
+            <MarkerF
+                position={position}
+                onClick={onMarkerClick}
+                icon={{
+                    path: "M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z",
+                    fillColor: "#0F4A5A",
+                    fillOpacity: 1,
+                    strokeColor: "#ffffff",
+                    strokeWeight: 2,
+                    scale: 1
+                }}
+            />
 
-            {showingInfoWindow && (
+            {showInfo && (
                 <InfoWindow position={position} onCloseClick={onClose}>
-                    <div style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        textAlign: "center",
-                        padding: "12px",
-                        maxWidth: "200px"
-                    }}>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            textAlign: "center",
+                            padding: "12px",
+                            maxWidth: "200px"
+                        }}
+                    >
                         <img src={logo} alt="Logo" style={{ height: "45px" }} />
+
                         <p style={{ fontSize: "13px", marginTop: "8px" }}>
                             {address || "Engenharia e Construção Lda."}
                         </p>

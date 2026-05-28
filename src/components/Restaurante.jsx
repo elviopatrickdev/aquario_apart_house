@@ -49,16 +49,16 @@ function Restaurante() {
                 {/* DESTAQUES */}
                 <div className="flex lg:flex-col gap-4 mx-auto lg:mx-0">
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                         <img src={spaguetti} className="w-16 rounded-full object-contain" />
-                        <span className="text-[#1a5f6b] font-semibold text-sm">
+                        <span className="text-[#1a5f6b] font-semibold text-[12px] md:text-sm">
                             {t("restaurant.feature1")}
                         </span>
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                         <img src={martini} className="w-16 rounded-full object-contain" />
-                        <span className="text-[#1a5f6b] font-semibold text-sm">
+                        <span className="text-[#1a5f6b] font-semibold text-[12px] md:text-sm">
                             {t("restaurant.feature2")}
                         </span>
                     </div>

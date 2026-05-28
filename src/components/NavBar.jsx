@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import logo from "../assets/logo.png";
-import NavLinks from "./NavLinks";
+import NavLinks02 from "./NavLinks02";
 
-function NavBar() {
+function NavBar02() {
+
   const { i18n, t } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -23,30 +25,11 @@ function NavBar() {
 
   const currentLanguage =
     languages.find((lang) => lang.code === i18n.language) || languages[0];
-
-  // ✅ FECHAR MENU (corrigido para iOS + Safari)
   const handleLinkClick = () => {
     setIsOpen(false);
-
-    requestAnimationFrame(() => {
-      document.body.style.overflow = "auto";
-    });
   };
 
-  // ✅ FECHA AO MUDAR HASH (FIX PRINCIPAL IPAD/MOBILE)
-  useEffect(() => {
-    const handleHashChange = () => {
-      setIsOpen(false);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  // Fecha menus ao clicar fora
+  // Fecha ao clicar fora
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -57,31 +40,11 @@ function NavBar() {
       ) {
         setIsOpen(false);
       }
-
-      if (
-        languageRef.current &&
-        !languageRef.current.contains(event.target)
-      ) {
-        setIsLanguageOpen(false);
-      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const handleReservationClick = () => {
-    const contactSection = document.getElementById("contact");
-
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-
-    setIsOpen(false);
-  };
 
   return (
     <nav className="fixed top-5 left-0 right-0 px-4 sm:px-6 lg:px-10 mx-auto z-50">
@@ -90,20 +53,18 @@ function NavBar() {
 
           {/* Logo */}
           <a href="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-12 sm:h-10 lg:ml-4"
-            />
+            <img src={logo} alt="Logo" className="h-12 sm:h-10 lg:ml-4" />
           </a>
 
           {/* Menu desktop */}
           <div className="hidden absolute left-1/2 transform -translate-x-1/2 lg:flex justify-between items-center gap-8">
-            <NavLinks className="link-nav text-sm whitespace-nowrap hover:text-[#0F4A5A] hover:scale-105 transform transition-transform duration-300 ease-out cursor-pointer" />
+            <NavLinks02
+              className="link-nav text-sm whitespace-nowrap hover:text-[#0F4A5A] hover:scale-105 transform transition-transform duration-300 ease-out cursor-pointer"
+            />
           </div>
 
-          {/* Right side desktop */}
-          <div className="flex items-center gap-3">
+          {/* Right buttons desktop */}
+          <div className="flex justify-between items-center">
 
             {/* Language Switcher Desktop */}
             <div
@@ -164,20 +125,29 @@ function NavBar() {
               )}
             </div>
 
-            {/* Reservation button desktop */}
-            <button
+            {/* BOTÃO FAZER RESERVA (desktop) */}
+            <Link
               className="btn-dark text-sm font-medium hidden lg:flex items-center px-8 py-3 border-2 rounded-full cursor-pointer transition-all duration-300 ease-out bg-[#0F4A5A] text-white hover:shadow-xl hover:bg-[#072730] hover:scale-105 active:scale-95"
-              onClick={handleReservationClick}
+              to="/"
+              onClick={() => {
+                setIsOpen(false);
+
+                setTimeout(() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }, 100);
+              }}
             >
               {t("Fazer Reserva")}
-            </button>
+            </Link>
 
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center">
               <button
                 ref={buttonRef}
                 className="text-2xl ml-4 w-8 flex justify-center focus:outline-none transition-all duration-300 ease-out hover:shadow-xl active:scale-95"
-                onClick={() => setIsOpen((prev) => !prev)}
+                onClick={() => setIsOpen(prev => !prev)}
               >
                 {isOpen ? "✕" : "☰"}
               </button>
@@ -190,16 +160,9 @@ function NavBar() {
       {isOpen && (
         <div
           ref={menuRef}
-          className="lg:hidden absolute right-4 w-64 top-full mt-2 px-6 py-4 bg-white shadow-lg rounded-3xl z-50"
-          onClick={(e) => {
-            // fecha quando clicar em qualquer link
-            if (e.target.tagName === "A" || e.target.closest("a")) {
-              setIsOpen(false);
-              document.body.style.overflow = "auto";
-            }
-          }}
+          className="lg:hidden absolute right-4 w-64 top-full text-left mt-1 px-6 py-4 space-y-4 bg-white shadow-lg rounded-lg animate-fade-in z-50"
         >
-          <NavLinks
+          <NavLinks02
             className="block link-nav-mobile mb-3 border-b border-gray-200"
             onClick={handleLinkClick}
           />
@@ -232,17 +195,26 @@ function NavBar() {
             </div>
           </div>
 
-          {/* Reservation button mobile */}
-          <button
-            className="reserva text-sm w-full flex items-center px-7 py-3 border-2 rounded-full cursor-pointer transition-all duration-300 ease-out bg-[#0F4A5A] text-white justify-center font-semibold hover:shadow-xl active:scale-95"
-            onClick={handleReservationClick}
+          {/* BOTÃO FAZER RESERVA (mobile) */}
+          <Link
+            className="reserva text-sm flex items-center justify-center px-7 py-3 border-2 rounded-full cursor-pointer transition-all duration-300 ease-out bg-[#0F4A5A] text-white font-semibold hover:shadow-xl active:scale-95"
+            to="/"
+            onClick={() => {
+              setIsOpen(false);
+
+              setTimeout(() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }, 100);
+            }}
           >
             {t("Fazer Reserva")}
-          </button>
+          </Link>
         </div>
       )}
     </nav>
   );
 }
 
-export default NavBar;
+export default NavBar02;

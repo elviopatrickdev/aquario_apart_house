@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-function NavLinks02({ className = "" }) {
+function NavLinks02({ className = "", onClick }) {
   const { t } = useTranslation();
 
   const links = [
@@ -35,7 +35,10 @@ function NavLinks02({ className = "" }) {
           key={link.label}
           className={className}
           to={{ pathname: link.path, hash: link.hash }}
-          onClick={() => handleClick(link.hash)}
+          onClick={() => {
+            handleClick(link.hash);
+            onClick?.(); 
+          }}
         >
           {link.label}
         </Link>
