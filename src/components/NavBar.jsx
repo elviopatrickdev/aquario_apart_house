@@ -121,21 +121,16 @@ function NavBar02() {
               )}
             </div>
 
-            {/* BOTÃO RESERVA DESKTOP */}
-            <Link
-              className="btn-dark text-sm font-medium hidden lg:flex items-center px-8 py-3 border-2 rounded-full bg-[#0F4A5A] text-white hover:bg-[#072730] hover:scale-105 transition-all duration-300"
-              to="/"
-              onClick={() => {
-                setIsOpen(false);
-                setTimeout(() => {
-                  document.getElementById("contact")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }, 100);
-              }}
+            {/* LINK RESERVA DESKTOP */}
+            <a
+              href="https://reservas.quartoverde.pt/aquario-hotel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-dark hidden items-center rounded-full border-2 bg-[#0F4A5A] px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-[#072730] lg:flex"
+              onClick={() => setIsOpen(false)}
             >
               {t("Fazer Reserva")}
-            </Link>
+            </a>
 
             {/* MOBILE RIGHT SIDE */}
             <div className="lg:hidden flex items-center gap-2">
