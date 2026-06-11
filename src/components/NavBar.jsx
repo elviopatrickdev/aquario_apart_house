@@ -211,20 +211,15 @@ function NavBar02() {
             onClick={handleLinkClick}
           />
 
-          <Link
-            className="text-sm flex items-center justify-center px-7 py-3 border-2 rounded-full bg-[#0F4A5A] text-white font-semibold hover:shadow-xl active:scale-95"
-            to="/"
-            onClick={() => {
-              setIsOpen(false);
-              setTimeout(() => {
-                document.getElementById("contact")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }, 100);
-            }}
+          <a
+            href="https://reservas.quartoverde.pt/aquario-hotel/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-dark flex items-center justify-center rounded-full border-2 bg-[#0F4A5A] px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-[#072730]"
+            onClick={() => setIsOpen(false)}
           >
             {t("Fazer Reserva")}
-          </Link>
+          </a>
         </div>
       )}
     </nav>
